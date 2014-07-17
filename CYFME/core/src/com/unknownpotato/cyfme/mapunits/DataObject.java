@@ -12,4 +12,12 @@ public class DataObject {
 		return this.pos;
 	}
 	
+	public float getRot(){
+		return this.rot;
+	}
+	
+	public String getType(){
+		return this.type;
+	}
+	
 }
