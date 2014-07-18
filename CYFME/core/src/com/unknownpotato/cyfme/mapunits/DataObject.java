@@ -8,6 +8,12 @@ public class DataObject {
 	private String type;
 	private float rot;
 	
+	public DataObject(Vector pos, String type, float rot){
+		this.pos = pos;
+		this.rot = rot;
+		this.type = type;
+	}
+	
 	public Vector getPos(){
 		return this.pos;
 	}
