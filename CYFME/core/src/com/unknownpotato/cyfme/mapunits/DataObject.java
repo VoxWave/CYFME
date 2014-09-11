@@ -1,20 +1,20 @@
 package com.unknownpotato.cyfme.mapunits;
 
-import com.unknownpotato.cyfme.vector.Vector;
+import com.badlogic.gdx.math.Vector2;
 
 public class DataObject {
 	
-	private Vector pos;
+	private Vector2 pos;
 	private String type;
 	private float rot;
 	
-	public DataObject(Vector pos, String type, float rot){
+	public DataObject(Vector2 pos, String type, float rot){
 		this.pos = pos;
 		this.rot = rot;
 		this.type = type;
 	}
 	
-	public Vector getPos(){
+	public Vector2 getPos(){
 		return this.pos;
 	}
 	
