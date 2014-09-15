@@ -5,11 +5,11 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-public class DataObjectSet implements Set<DataObject> {
+public class Level implements Set<DataObject> {
 	
 	private Set<DataObject> dataset;
 	
-	public DataObjectSet(){
+	public Level(){
 		this.dataset = new HashSet<DataObject>();
 	}
 
