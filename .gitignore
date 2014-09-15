@@ -3,3 +3,9 @@ pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.next
 release.properties
+local.properties
+CYFME/local.properties
+
+.DS_Store
+*/.DS_Store
+**/**/.DS_Store
