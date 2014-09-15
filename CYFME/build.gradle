@@ -80,10 +80,12 @@ project(":core") {
     dependencies {
         compile "com.badlogicgames.gdx:gdx:$gdxVersion"
         compile "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
-        compile "com.badlogicgames.gdx:gdx-bullet:$gdxVersion"
         compile "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
         compile "com.badlogicgames.gdx:gdx-controllers:$gdxVersion"
         compile "com.badlogicgames.box2dlights:box2dlights:1.2"
+        compile "com.fasterxml.jackson.core:jackson-core:2.4.2"
+		compile "com.fasterxml.jackson.core:jackson-annotations:2.4.2"
+		compile "com.fasterxml.jackson.core:jackson-databind:2.4.2"
     }
 }
 
