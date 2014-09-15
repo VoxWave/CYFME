@@ -2,50 +2,41 @@ package com.unknownpotato.cyfme;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.unknownpotato.cyfme.editor.Editor;
+import com.unknownpotato.cyfme.ui.Drawable;
+import com.unknownpotato.cyfme.ui.EditorUI;
 
 public class cyfme implements ApplicationListener {
-	SpriteBatch batch;
-	Texture img;
+	private Drawable drawable;
 	
 	@Override
 	public void create () {
-		batch = new SpriteBatch();
-		img = new Texture("badlogic.jpg");
+		Editor editor = new Editor();
+		drawable = new EditorUI(editor);
 	}
 
 	@Override
 	public void render () {
-		Gdx.gl.glClearColor(1, 0, 0, 1);
-		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-		batch.begin();
-		batch.draw(img, 0, 0);
-		batch.end();
+		drawable.render(Gdx.graphics.getDeltaTime());
 	}
 
 	@Override
 	public void resize(int width, int height) {
-		// TODO Auto-generated method stub
-		
+		drawable.resize(width, height);
 	}
 
 	@Override
 	public void pause() {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void resume() {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void dispose() {
-		// TODO Auto-generated method stub
-		
+		drawable.dispose();
 	}
 }
