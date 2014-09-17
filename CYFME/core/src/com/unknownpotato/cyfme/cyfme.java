@@ -12,6 +12,7 @@ public class cyfme implements ApplicationListener {
 	
 	@Override
 	public void create () {
+		//new MapReader().readMap("/home/mikko/cyfme-test/test.cyf");
 		Editor editor = new Editor();
 		drawable = new EditorUI(editor);
 	}

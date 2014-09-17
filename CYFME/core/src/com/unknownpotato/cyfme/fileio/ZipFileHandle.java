@@ -1,6 +1,6 @@
 package com.unknownpotato.cyfme.fileio;
-
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
@@ -8,18 +8,24 @@ import java.util.zip.ZipFile;
 import com.badlogic.gdx.Files.FileType;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.utils.GdxRuntimeException;
-
-public class ZipFileHandle extends FileHandle{
+ 
+public class ZipFileHandle extends FileHandle {
+ 
+  final ZipFile archive;
+	final ZipEntry archiveEntry;
 	
-	private ZipFile archive;
-	private ZipEntry archiveEntry;
-	
-	public ZipFileHandle(ZipFile archive, File file) {
-		super(file, FileType.Classpath);	
+	public ZipFileHandle (ZipFile archive, File file) {
+		super(file, FileType.Classpath);
 		this.archive = archive;
-		this.archiveEntry = this.archive.getEntry(file.getPath());
+		archiveEntry = this.archive.getEntry(file.getName());
 	}
 	
+	public ZipFileHandle (ZipFile archive, String fileName) {
+		super(fileName.replace('\\', '/'), FileType.Classpath);
+		this.archive = archive;
+		this.archiveEntry = archive.getEntry(fileName.replace('\\', '/'));
+	}
+ 
 	@Override
 	public FileHandle child (String name) {
 		name = name.replace('\\', '/');
@@ -50,7 +56,7 @@ public class ZipFileHandle extends FileHandle{
 	public InputStream read () {
 		try {
 			return archive.getInputStream(archiveEntry);
-		} catch (Exception e) {
+		} catch (IOException e) {
 			throw new GdxRuntimeException("File not found: " + file + " (Archive)");
 		}
 	}
@@ -69,4 +75,5 @@ public class ZipFileHandle extends FileHandle{
 	public long lastModified () {
 		return archiveEntry.getTime();
 	}
+	
 }

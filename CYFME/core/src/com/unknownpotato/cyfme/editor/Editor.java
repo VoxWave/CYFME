@@ -3,14 +3,15 @@ package com.unknownpotato.cyfme.editor;
 import java.io.File;
 
 import com.unknownpotato.cyfme.mapunits.Level;
+import com.unknownpotato.cyfme.serializing.MapReader;
 import com.unknownpotato.cyfme.serializing.Serializer;
 
 public class Editor {
-	private Serializer serializer;
+	private MapReader mapreader;
 	private Level level;
 	
 	public Editor() {
-		this.serializer = new Serializer();
+		this.mapreader = new MapReader();
 	}
 	
 	public Level getLevel() {
@@ -18,6 +19,6 @@ public class Editor {
 	}
 	
 	public void loadLevel(File file) {
-		level = serializer.load(file, Level.class);
+		mapreader.readMap(file);
 	}
 }
