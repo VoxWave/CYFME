@@ -4,7 +4,6 @@ import java.io.File;
 
 import com.unknownpotato.cyfme.mapunits.Level;
 import com.unknownpotato.cyfme.serializing.MapReader;
-import com.unknownpotato.cyfme.serializing.Serializer;
 
 public class Editor {
 	private MapReader mapreader;

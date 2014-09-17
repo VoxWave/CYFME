@@ -1,13 +1,14 @@
 package com.unknownpotato.cyfme.ui;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.unknownpotato.cyfme.editor.Editor;
 
-public class EditorUI implements Drawable{
+public class EditorUI implements Screen{
 	private Editor editor;
 	
 	private Stage stage;
@@ -41,6 +42,30 @@ public class EditorUI implements Drawable{
 	@Override
 	public void dispose() {
 	    stage.dispose();
+	}
+
+	@Override
+	public void show() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void hide() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void pause() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void resume() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

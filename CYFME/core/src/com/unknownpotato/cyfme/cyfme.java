@@ -2,43 +2,41 @@ package com.unknownpotato.cyfme;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Screen;
 import com.unknownpotato.cyfme.editor.Editor;
-import com.unknownpotato.cyfme.serializing.MapReader;
-import com.unknownpotato.cyfme.ui.Drawable;
 import com.unknownpotato.cyfme.ui.EditorUI;
 
 public class cyfme implements ApplicationListener {
-	private Drawable drawable;
+	private Screen screen;
 	
 	@Override
 	public void create () {
-		//new MapReader().readMap("/home/mikko/cyfme-test/test.cyf");
 		Editor editor = new Editor();
-		drawable = new EditorUI(editor);
+		screen = new EditorUI(editor);
 	}
 
 	@Override
 	public void render () {
-		drawable.render(Gdx.graphics.getDeltaTime());
+		screen.render(Gdx.graphics.getDeltaTime());
 	}
 
 	@Override
 	public void resize(int width, int height) {
-		drawable.resize(width, height);
+		screen.resize(width, height);
 	}
 
 	@Override
 	public void pause() {
-		
+		screen.pause();
 	}
 
 	@Override
 	public void resume() {
-		
+		screen.resume();
 	}
 
 	@Override
 	public void dispose() {
-		drawable.dispose();
+		screen.dispose();
 	}
 }
