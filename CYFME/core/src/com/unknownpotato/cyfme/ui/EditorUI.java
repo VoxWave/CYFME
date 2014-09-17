@@ -17,8 +17,8 @@ public class EditorUI implements Drawable{
 	public EditorUI(Editor editor) {
 		this.editor = editor;
 		this.stage = new Stage(new ScreenViewport());
-		this.sideActor = new SideActor();
-		this.mapActor = new MapActor();
+		this.sideActor = new SideActor(editor);
+		this.mapActor = new MapActor(editor);
 		this.mapActor.setBounds(0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 		this.sideActor.setBounds(0, 0, 100, Gdx.graphics.getHeight());
 

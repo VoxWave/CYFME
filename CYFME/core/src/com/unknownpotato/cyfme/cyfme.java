@@ -3,6 +3,7 @@ package com.unknownpotato.cyfme;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.unknownpotato.cyfme.editor.Editor;
+import com.unknownpotato.cyfme.serializing.MapReader;
 import com.unknownpotato.cyfme.ui.Drawable;
 import com.unknownpotato.cyfme.ui.EditorUI;
 
