@@ -1,4 +1,4 @@
-package com.unknownpotato.cyfme.serializing;
+package com.unknownpotato.cyfme.fileio;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import java.util.zip.ZipFile;
 
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
-import com.unknownpotato.cyfme.fileio.ZipFileHandle;
+import com.unknownpotato.cyfme.fileio.serializing.Serializer;
 import com.unknownpotato.cyfme.mapunits.DataObject;
 import com.unknownpotato.cyfme.mapunits.Level;
 import com.unknownpotato.cyfme.mapunits.Metadata;

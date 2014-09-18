@@ -1,4 +1,4 @@
-package com.unknownpotato.cyfme.serializing;
+package com.unknownpotato.cyfme.fileio.serializing;
 
 import java.io.File;
 import java.io.IOException;
